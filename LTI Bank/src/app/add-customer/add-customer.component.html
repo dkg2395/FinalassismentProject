@@ -1,0 +1,37 @@
+<div>
+  <h4> Add New Customer</h4>
+  <div class="container ">
+    <div class="row" id="form-grp">
+      <div [hidden]="submitted">
+        <form  (ngSubmit)="onSubmit()" class = "form-horizontal" ngNativeValidate>
+         
+          <div class="form-group form-row col-sm-12 col-auto">
+            <label  class="control-label col-sm-12"  for="name"> Enter Your Name</label><br>
+            <input type="text" class="form-control" placeholder="Enter the name" id="name" Required="Required" [(ngModel)]="customer.name"name="name">
+
+          </div>
+          <br>
+          <div class="form-group col-sm-12">
+            <label  class="control-label col-sm-12"  for="age">Enter Your Age</label><br>
+            <input type="number" class="form-control" id="age" placeholder="Enter the Age" Required="Required" [(ngModel)]="customer.age" name="age">
+          </div>
+          <div class="form-group col-sm-12">
+            <label  class="control-label col-sm-4"  for="typeofAccount">typeofAccount</label><br>
+            <input type="text" class="form-control" placeholder="Enter Type Saving||Current" id="typeofAccount" Required="Required" [(ngModel)]="customer.typeofAccount"
+              name="typeofAccount">
+          </div>
+          
+          <br><br>
+          <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+      </div>
+      <br>
+      <div [hidden]="!submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="AddNew()">Add Customer</button>
+      </div>
+
+    </div>
+  </div>
+</div>

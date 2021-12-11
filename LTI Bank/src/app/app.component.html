@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <!-- Links -->
+  <ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+     <img src="assets/logo.png" width="160" height="100">
+  </li>
+  <li class="nav-item">
+    <font size="50px">   <a routerLink="home" class="nav-link" routerLinkActive="active">Home</a></font>
+  </li>
+
+  <li class="nav-item">
+    <font size="50px">   <a routerLink="about" class="nav-link" routerLinkActive="active">About</a></font>
+  </li>
+  
+    <li class="nav-item mr-auto mt-2 mt-lg-0">
+      <font size="50px">  <a routerLink="Customers" class="nav-link mr-sm-2" routerLinkActive="active" font-size="5px">Customer List</a></font>
+    </li>
+    <li class="nav-item">
+      <font size="50px">   <a routerLink="add" class="nav-link" routerLinkActive="active">Add Customer</a></font>
+    </li>
+
+  
+  </ul>
+</nav>
+
+
+<div class="container">
+  <br>
+  <marquee><h2 style="text-align: center; background-color: 'pink';">{{title}}</h2></marquee>
+  <hr>  
+  <div class="card">
+    <div class="card-body">
+  <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
